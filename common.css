@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto Regular'), local('Roboto'), url('./fonts/roboto-v30-latin-regular.woff2') format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Roboto Italic'), local('Roboto-Italic'), url('./fonts/roboto-v30-latin-italic.woff2') format('woff2');
+    font-display: swap;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+:root {
+    --intil-black: #000000;
+    --intil-white: #FFFFFF;
+
+    --intil-grey-1: #F5F2F0;
+    --intil-grey-2: #F5F2F0;
+    --intil-grey-3: #E0DEDD;
+    --intil-grey-4: #ABABAB;
+    --intil-grey-5: #838587;
+    --intil-grey-6: #555758;
+    --intil-grey-7: #2B2C2C;
+
+    --intil-green: #90E06A;
+    --intil-yellow: #ECDC4B;
+    --intil-light-orange: #EEBA36;
+    --intil-orange: #F08B52;
+    --intil-red: #D74141;
+    --intil-light-gray: #E9E9E9;
+
+    --intil-h1-size: 54px;
+    --intil-h2-size: 34px;
+    --intil-h3-size: 30px;
+    --intil-h4-size: 24px;
+    --intil-h5-size: 14px;
+}

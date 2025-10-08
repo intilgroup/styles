@@ -1,0 +1,9 @@
+*
+!/dist/**
+!/README.md
+!/LICENSE
+!/package.json
+
+!/common.css
+!/favicon.svg
+!/fonts

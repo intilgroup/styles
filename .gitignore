@@ -1,0 +1,10 @@
+*
+!/.gitignore
+!/.npmignore
+!/common.css
+!/favicon.svg
+!/package.json
+!/package-lock.json
+
+!/fonts
+!/fonts/**/*

@@ -1,0 +1,10 @@
+{
+    "name": "@intilgroup/styles",
+    "version": "0.0.1",
+    "files": [
+        "common.css",
+        "favicon.svg",
+        "fonts"
+    ],
+    "main": "common.css"
+}
