@@ -56,11 +56,16 @@ html, body {
     --intil-grey-7: #2B2C2C;
 
     --intil-green: #90E06A;
+    --intil-green-complement: #7FC85D;
     --intil-yellow: #ECDC4B;
+    --intil-yellow-complement: #C9BB41;
     --intil-light-orange: #EEBA36;
     --intil-orange: #F08B52;
+    --intil-orange-complement: #C06E40;
     --intil-red: #D74141;
-    --intil-light-gray: #E9E9E9;
+    --intil-red-complement: #AC3434;
+    --intil-light-grey: #E9E9E9;
+    --intil-light-grey-complement: #76787B;
 
     --intil-h1-size: 54px;
     --intil-h2-size: 34px;
