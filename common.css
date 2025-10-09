@@ -68,27 +68,30 @@ html, body {
     --intil-light-grey-complement: #76787B;
 
     --intil-h1-size: 26px;
+    --intil-h1-font-weight: 700;
     --intil-h2-size: 22px;
+    --intil-h2-font-weight: 700;
     --intil-h3-size: 18px;
+    --intil-h3-font-weight: 700;
 }
 
 .intil-h1 {
     all: unset;
     font-size: var(--intil-h1-size);
-    font-weight: 700;
+    font-weight: var(--intil-h1-font-weight);
     margin-bottom: 1rem;
 }
 
 .intil-h2 {
     all: unset;
     font-size: var(--intil-h2-size);
-    font-weight: 700;
+    font-weight: var(--intil-h2-font-weight);
     margin-bottom: 1rem;
 }
 
 .intil-h3 {
     all: unset;
     font-size: var(--intil-h3-size);
-    font-weight: 700;
+    font-weight: var(--intil-h3-font-weight);
     margin-bottom: 1rem;
 }
