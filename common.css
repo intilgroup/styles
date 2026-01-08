@@ -95,3 +95,18 @@ html, body {
     font-weight: var(--intil-h3-font-weight);
     margin-bottom: 1rem;
 }
+
+.intil-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 1rem;
+    border: none;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    outline: none;
+    background-color: var(--intil-black);
+    color: white;
+}
