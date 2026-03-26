@@ -102,11 +102,106 @@ html, body {
     align-items: center;
     text-decoration: none;
     padding: .75em 1.5625em;
-    border: none;
+    border: 1px solid transparent;
     font-weight: bold;
     border-radius: 0.5rem;
     cursor: pointer;
     outline: none;
     background-color: var(--intil-black);
-    color: white;
+    color: var(--intil-white);
+    width: min-content;
+    white-space: nowrap;
+}
+
+.intil-button:hover {
+    background-color: var(--intil-grey-7);
+}
+
+.intil-button:active {
+    background-color: var(--intil-grey-6);
+}
+
+.intil-button:disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
+}
+
+/* Light filled variant */
+.intil-button.light {
+    background-color: var(--intil-white);
+    color: var(--intil-black);
+}
+
+.intil-button.light:hover {
+    background-color: var(--intil-grey-1);
+}
+
+.intil-button.light:active {
+    background-color: var(--intil-grey-3);
+}
+
+.intil-button.light:disabled {
+    background-color: var(--intil-black);
+    color: var(--intil-white);
+    opacity: 0.2;
+}
+
+/* Outline variant (for light backgrounds) */
+.intil-button.outline {
+    background-color: transparent;
+    color: var(--intil-black);
+    border-color: var(--intil-black);
+}
+
+.intil-button.outline:hover {
+    background-color: transparent;
+    border-width: 1.5px;
+}
+
+.intil-button.outline:active {
+    background-color: transparent;
+    border-width: 2px;
+}
+
+.intil-button.outline:disabled {
+    background-color: transparent;
+    border-color: var(--intil-grey-5);
+    color: var(--intil-grey-5);
+    opacity: 1;
+}
+
+/* Outline variant (for dark backgrounds) */
+.intil-button.outline-light {
+    background-color: transparent;
+    color: var(--intil-white);
+    border-color: var(--intil-white);
+}
+
+.intil-button.outline-light:hover {
+    background-color: transparent;
+    border-width: 1.5px;
+}
+
+.intil-button.outline-light:active {
+    background-color: transparent;
+    border-width: 2px;
+}
+
+.intil-button.outline-light:disabled {
+    background-color: transparent;
+    border-color: var(--intil-grey-5);
+    color: var(--intil-grey-5);
+    opacity: 1;
+}
+
+/* Small size */
+.intil-button.sm {
+    padding: .5em 1.25em;
+    font-size: 0.875rem;
+}
+
+/* Large size */
+.intil-button.lg {
+    padding: 1.5em 2.25em;
+    font-size: 1.125rem;
 }
