@@ -101,7 +101,7 @@ html, body {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    padding: 1rem;
+    padding: .75em 1.5625em;
     border: none;
     font-weight: bold;
     border-radius: 0.5rem;

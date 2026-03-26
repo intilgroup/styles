@@ -1,6 +1,6 @@
 {
     "name": "@intilgroup/styles",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "files": [
         "common.css",
         "favicon.svg",
