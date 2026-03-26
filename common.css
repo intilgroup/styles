@@ -111,6 +111,11 @@ html, body {
     color: var(--intil-white);
     width: min-content;
     white-space: nowrap;
+
+    > a {
+        color: inherit;
+        text-decoration: none;
+    }
 }
 
 .intil-button:hover {
