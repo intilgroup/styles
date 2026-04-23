@@ -251,6 +251,45 @@ html, body {
     }
 }
 
+.intil-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25em 0.8em;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    font-weight: 400;
+    background-color: var(--intil-black);
+    color: var(--intil-white);
+    white-space: nowrap;
+    user-select: none;
+
+    /* Light filled variant */
+    &.light {
+        background-color: var(--intil-grey-1);
+        color: var(--intil-black);
+    }
+
+    &.disabled,
+    &[disabled] {
+        background-color: var(--intil-grey-4);
+        color: var(--intil-white);
+        opacity: 0.7;
+    }
+
+    /* Small size */
+    &.sm {
+        padding: 0.15em 0.6em;
+        font-size: 0.75rem;
+    }
+
+    /* Large size */
+    &.lg {
+        padding: 0.35em 1em;
+        font-size: 1rem;
+    }
+}
+
 .intil-side-panel {
     background-color: var(--intil-grey-7);
     padding: 20px 0 24px;
