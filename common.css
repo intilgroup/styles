@@ -251,6 +251,30 @@ html, body {
     }
 }
 
+.intil-link {
+    color: var(--intil-black);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    cursor: pointer;
+
+    &:hover {
+        color: var(--intil-grey-7);
+    }
+
+    &:visited {
+        color: var(--intil-grey-6);
+    }
+
+    &.disabled,
+    &[disabled],
+    &[aria-disabled="true"] {
+        color: var(--intil-grey-4);
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+}
+
 .intil-tag {
     display: inline-flex;
     align-items: center;
