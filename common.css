@@ -233,6 +233,20 @@ html, body {
         }
     }
 
+    /* Danger variant */
+    &.danger {
+        background-color: var(--intil-red);
+        color: var(--intil-white);
+
+        &:hover {
+            background-color: var(--intil-red-complement);
+        }
+
+        &:active {
+            background-color: var(--intil-red-complement);
+        }
+    }
+
     /* Small size */
     &.sm {
         padding: .5em 1.25em;
