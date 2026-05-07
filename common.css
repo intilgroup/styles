@@ -269,7 +269,6 @@ html, body {
 .intil-link {
     color: var(--intil-black);
     text-decoration: underline;
-    text-underline-offset: 3px;
     cursor: pointer;
 
     &:hover {
