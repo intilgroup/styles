@@ -268,7 +268,6 @@ html, body {
 
 .intil-link {
     color: var(--intil-black);
-    font-weight: 700;
     text-decoration: underline;
     text-underline-offset: 3px;
     cursor: pointer;
