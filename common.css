@@ -127,6 +127,7 @@ html, body {
     text-decoration: none;
     padding: .75em 1.5625em;
     border: 1px solid transparent;
+    font: inherit;
     font-weight: bold;
     border-radius: 0.5rem;
     cursor: pointer;
