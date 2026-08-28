@@ -165,6 +165,16 @@ html, body {
         cursor: not-allowed;
     }
 
+    /*
+     * A button waiting on a request in flight is inert for the same reason as a disabled one, but
+     * it means "hold on", not "you may not do this". Mark those with aria-busy so they read as busy
+     * rather than unavailable. `progress` keeps the pointer arrow, since the surrounding form is
+     * still interactive; `wait` would claim otherwise.
+     */
+    &:disabled[aria-busy="true"] {
+        cursor: progress;
+    }
+
     /* Light filled variant */
     &.light {
         background-color: var(--intil-white);
