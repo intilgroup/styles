@@ -1,13 +1,15 @@
 {
     "name": "@intilgroup/styles",
-    "version": "0.0.25",
+    "version": "0.0.27",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/intilgroup/styles.git"
     },
     "files": [
         "common.css",
+        "table.css",
         "favicon.svg",
+        "logo.svg",
         "fonts"
     ],
     "main": "common.css"

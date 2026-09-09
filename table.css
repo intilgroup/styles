@@ -1,0 +1,113 @@
+/*
+ * The Intil data table.
+ *
+ * This is the source of truth for the table's appearance. It is not part of common.css, because
+ * common.css is applied at the document level and cannot reach the shadow roots the tables are
+ * rendered in. It is consumed twice instead, both times by generation rather than by copying:
+ *
+ *   - @intilgroup/web-components generates a Lit CSSResult from it (tableStyle), which the
+ *     application's tables adopt into their shadow roots.
+ *   - signals_pdf generates a Go constant from it, so a rendered document's table is the same
+ *     table the recipient sees in the application.
+ *
+ * It therefore carries the screen's affordances — hover, cursor, transitions — as well as the
+ * appearance. Those are inert in a printed document, so leaving them here costs the document
+ * nothing and keeps one file authoritative. The one rule a printed document must override is
+ * "overflow: hidden", which clips a table that spans a page break.
+ */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid var(--intil-grey-3);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--intil-white);
+}
+
+thead th {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--intil-white);
+    text-align: left;
+    padding: 1em 1.1em;
+    background: var(--intil-black);
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+}
+
+thead th:hover {
+    background: var(--intil-grey-7);
+}
+
+thead th .sort-indicator {
+    margin-left: 0.4em;
+    color: var(--intil-grey-4);
+    font-size: 0.6em;
+    letter-spacing: -0.1em;
+    vertical-align: middle;
+}
+
+thead th.active .sort-indicator {
+    color: var(--intil-white);
+    font-size: 0.75em;
+    letter-spacing: 0;
+}
+
+tbody td {
+    padding: 1em 1.1em;
+    font-size: 0.9rem;
+    color: var(--intil-grey-6);
+    border: none;
+    vertical-align: middle;
+}
+
+tbody tr:nth-child(odd) td {
+    background-color: var(--intil-grey-2);
+}
+
+tbody tr {
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+tbody tr:hover td {
+    background-color: var(--intil-grey-3);
+}
+
+tbody td:first-child {
+    color: var(--intil-black);
+}
+
+.cell {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.copy-icon {
+    appearance: none;
+    border: none;
+    background: transparent;
+    color: var(--intil-black);
+    cursor: pointer;
+    opacity: 0;
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-size: 1rem;
+    line-height: 1;
+    transition: opacity 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+tbody td:hover .copy-icon {
+    opacity: 0.5;
+}
+
+.copy-icon:hover {
+    opacity: 1;
+    background: var(--intil-grey-4);
+    color: var(--intil-white);
+}

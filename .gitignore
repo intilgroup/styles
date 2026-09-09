@@ -2,7 +2,9 @@
 !/.gitignore
 !/.npmignore
 !/common.css
+!/table.css
 !/favicon.svg
+!/logo.svg
 !/LICENSE
 !/package.json
 !/package-lock.json
