@@ -43,6 +43,29 @@ thead th:hover {
     background: var(--intil-grey-7);
 }
 
+/*
+ * A sortable column's header is a button, so that it is reached and pressed from the keyboard as well
+ * as clicked. It fills its cell, which hands it the cell's padding, so that the whole header sorts as
+ * the whole header highlights.
+ */
+thead th:has(> button) {
+    padding: 0;
+}
+
+thead th > button {
+    all: unset;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: 1em 1.1em;
+    cursor: pointer;
+}
+
+thead th > button:focus-visible {
+    outline: 2px solid var(--intil-white);
+    outline-offset: -4px;
+}
+
 thead th .sort-indicator {
     margin-left: 0.4em;
     color: var(--intil-grey-4);
@@ -82,6 +105,31 @@ tbody td:first-child {
     color: var(--intil-black);
 }
 
+/*
+ * The cell a row is opened from holds a link to what the row opens, so that it is reached and opened
+ * from the keyboard, and in a tab of its own, as well as by a click anywhere on the row. It reads as
+ * the cell's text. A row something in it has the keyboard's focus is lit as a hovered one is.
+ */
+.row-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.row-link:hover,
+.row-link:focus-visible {
+    text-decoration: underline;
+}
+
+.row-link:focus-visible {
+    outline: 2px solid var(--intil-black);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+tbody tr:has(:focus-visible) td {
+    background-color: var(--intil-grey-3);
+}
+
 .cell {
     display: inline-flex;
     align-items: center;
@@ -110,4 +158,11 @@ tbody td:hover .copy-icon {
     opacity: 1;
     background: var(--intil-grey-4);
     color: var(--intil-white);
+}
+
+/* Shown when it has the keyboard's focus, which no hover reveals it for. */
+.copy-icon:focus-visible {
+    opacity: 1;
+    outline: 2px solid var(--intil-black);
+    outline-offset: 1px;
 }
